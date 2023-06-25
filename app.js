@@ -15,13 +15,13 @@ const contactContent = "Scelerisque Lorem ipsum dolor sit amet, consectetur adip
 let posts=[];
 
 
-main().catch(err=>console.log(err.message));
-async function main(){
-    await mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qq0y2qa.mongodb.net/blogDB`); 
-    console.log("DB Connected");
-}
+// main().catch(err=>console.log(err.message));
+// async function main(){
+//     await mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qq0y2qa.mongodb.net/blogDB`); 
+//     console.log("DB Connected");
+// }
 // mongoose.connect('mongodb://127.0.0.1:27017/blogDB');
-
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qq0y2qa.mongodb.net/blogDB`); 
 console.log(`${process.env.DB_USERNAME}`);
 console.log(`${process.env.DB_PASSWORD}`);
 const blogSchema=new mongoose.Schema({
