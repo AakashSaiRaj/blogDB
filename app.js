@@ -23,6 +23,7 @@ async function main(){
 // mongoose.connect('mongodb://127.0.0.1:27017/blogDB');
 
 console.log(`${process.env.DB_USERNAME}`);
+console.log(`${process.env.DB_PASSWORD}`);
 const blogSchema=new mongoose.Schema({
     title:String,
     content:String
